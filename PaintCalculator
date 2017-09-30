@@ -14,38 +14,50 @@ The main() method displays the final price. For example, the cost to paint a 15-
 
 package javaclasshomework4;
 import java.util.Scanner;
-public class PaintCalculator2 
+public class PaintCalculator 
 {
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-        int TotalWallCoverage = 350;  //paint covers 350 sq ft/gallon
-        int height;
-        int length;
-        int width;
-        double totalSqFt;
-        double paintNeeded;
-        Scanner input = new Scanner (System.in);
-        System.out.print("Enter the length of the room: ");
-        length = input.nextInt();
-        System.out.print("Enter the width of the room: ");
-        width = input.nextInt();
-        System.out.print("Enter the height of the room: ");
-        height = input.nextInt();
+        Scanner input = new Scanner(System.in);
         
-        totalSqFt = length * width * height;  //totalsqft to be painted
-        public static double paintNeeded(double TotalSqFt, double length, double width, double height)
-        {
-            double paintNeeded;
-            int TotalWallCoverage;
-            paintNeeded = totalSqFt *2 / TotalWallCoverage; //amount of paint needed
-         return paintNeeded;
-          System.out.println("gallons of paint needed is " + paintNeeded);
-        }
-        
-        
+        double Wall_Area_Total;
+      
+        System.out.print("What is the height of the room?: ");
+        double height = input.nextDouble();
+        System.out.print("What is the length of the room?: ");
+        double length = input.nextDouble();
+        System.out.print("What is the width of the room?: ");
+        double width = input.nextDouble();
+      
+        double WallAreaTotal(double lenght, double width, double height);
+        double Paint_Quantity_Needed= paintQuantity (Wall_Area_Total);
+        TotalPrice (Paint_Quantity_Needed);
+    }    
+    //Calculates the area of the wall in a room
+    public static double WallAreaMethod(double height, double length, double width)
+    {
+        double Wall_Area_Total;
+        Wall_Area_Total = length * width * height;
+        System.out.println("For this room with a height of " + height + " feet");
+        System.out.println("For this room with a height of " + length + " long");
+        System.out.println("For this room with\ a height of " + width + " wide");
+        return Wall_Area_Total;
+    }
     
-        //System.out.println("The height of the room is " + height + "feet");
-        //System.out.println("The length of the room is " + length + "long");
-        //System.out.println("The width of the room is " + width + "wide");
+    //Quantity of paint needed
+    public static double PaintNeeded(double WallAreaMethod)
+    {
+        double Wall_Area_Total;
+        double paintQuantity;
+        paintQuantity = WallAreaMethod * 2 / 350;
+        System.out.println("You need to purchase " + paintQuantity + " gallons of paint");
+        return paintQuantity;
+    }    
+        
+    public static double TotalPrice(double PaintQuantity)
+    {
+        double price = PaintQuantity * 32.0;
+        System.out.println("The price for painting the room will be $ " + price);
+        return price;
     }
 }
