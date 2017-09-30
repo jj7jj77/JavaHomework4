@@ -19,7 +19,7 @@ public class PaintCalculator
     public static void main(String[] args) 
     {
         Scanner input = new Scanner(System.in);
-         
+        
         System.out.print("What is the height of the room? ");
         double height = input.nextDouble();
         System.out.print("What is the length of the room? ");
@@ -34,17 +34,17 @@ public class PaintCalculator
         
         double WallAreaTotal = WallArea_Method(length, width, height);
         //System.out.println ("Total is " + WallAreaTotal);  //for myself to use
-        public static double WallArea_Method(height, length, width)
-        {
-        double WallAreaTotal = length * width * height;
-        return WallAreaTotal;
-        }
+        
 
         //double Paint_Quantity_Needed= paintQuantity (Wall_Area_Total);
         //TotalPrice (Paint_Quantity_Needed);
     }    
     //Calculates the area of the wall in a room
-    
+    public static double WallArea_Method(double height, double length, double width)
+    {
+        double WallAreaTotal = length * width * height;
+        return WallAreaTotal;
+    }
     
     //Quantity of paint needed
     /*public static double PaintNeeded(double WallAreaMethod)
