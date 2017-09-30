@@ -22,11 +22,11 @@ public class PaintCalculator
         
         double Wall_Area_Total;
       
-        System.out.print("What is the height of the room?: ");
+        System.out.print("What is the height of the room? ");
         double height = input.nextDouble();
-        System.out.print("What is the length of the room?: ");
+        System.out.print("What is the length of the room? ");
         double length = input.nextDouble();
-        System.out.print("What is the width of the room?: ");
+        System.out.print("What is the width of the room? ");
         double width = input.nextDouble();
       
         double WallAreaTotal(double lenght, double width, double height);
@@ -40,7 +40,7 @@ public class PaintCalculator
         Wall_Area_Total = length * width * height;
         System.out.println("For this room with a height of " + height + " feet");
         System.out.println("For this room with a height of " + length + " long");
-        System.out.println("For this room with\ a height of " + width + " wide");
+        System.out.println("For this room with a height of " + width + " wide");
         return Wall_Area_Total;
     }
     
