@@ -1,6 +1,3 @@
-IN PROGRESS
-
-
 package javaclasshomework4;
 import java.util.Scanner;
 public class Insurance 
@@ -24,10 +21,7 @@ public class Insurance
     {
         int years = currentYear - birthYear;
         int decades = years / 10;
-        int premium = (decades + 15) * 20);
+        int premium = (decades + 15) * 20;
         return premium;
-    }
-    
-    
     }
 }
