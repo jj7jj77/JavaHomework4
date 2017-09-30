@@ -29,12 +29,12 @@ public class PaintCalculator
         System.out.print("What is the width of the room? ");
         double width = input.nextDouble();
       
-        double WallAreaTotal(double lenght, double width, double height);
+        double WallAreaTotal = WallArea_Method(double lenght, double width, double height);
         double Paint_Quantity_Needed= paintQuantity (Wall_Area_Total);
         TotalPrice (Paint_Quantity_Needed);
     }    
     //Calculates the area of the wall in a room
-    public static double WallAreaMethod(double height, double length, double width)
+    public static double WallArea_Method(double height, double length, double width)
     {
         double Wall_Area_Total;
         Wall_Area_Total = length * width * height;
